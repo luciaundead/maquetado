@@ -1,39 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LC - Velas de Soja</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
-</head>
+
 <body>
+    <!-- HEADER -->
     <header class="menu-header">
         <div><img src="imagenes/logo-grey.png" width="150px"></div>
         <div>
-        <nav>
-            <ul>
-                <li><a href="index.html"></a>INICIO</li>
-                <li>PRODUCTOS</li>
-                <li>TIENDA</li>
-                <li>CONTACTO</li>
-            </ul>
-        </nav>
-    </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="#productos">PRODUCTOS</a></li>
+                    <li><a href="http://tiendanube.com" target="_blank">TIENDA</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="cart">
+            <img src="imagenes/basket-shopping-solid.svg" alt="" onclick="abrirCarrito()">
+        </div>
     </header>
+    <!--CARRITO-->
+    <div class="carrito" id="carrito" style="display: none;">
+        <div class="cerrar-producto" onclick="cerrarCarrito()">
+            <img src="imagenes/xmark-solid.svg" alt="" width="15px">
+        </div>
+        <div class="carrito-producto">
+            <div><img src="imagenes/shop-vela.jpg" alt=""></div>
+            <div>
+                <h4>Producto1</h4>
+                <p>Descripcion</p>
+            </div>
+        </div>
+        <div class="carrito-producto">
+            <div><img src="imagenes/shop-vela.jpg" alt=""></div>
+            <div>
+                <h4>Producto2</h4>
+                <p>Descripcion</p>
+            </div>
+        </div>
+        <div class="carrito-producto">
+            <div><img src="imagenes/shop-vela.jpg" alt=""></div>
+            <div>
+                <h4>Producto3</h4>
+                <p>Descripcion</p>
+            </div>
+        </div>
+        <button class="finalizar-compra">FINALIZAR COMPRA</button>
+    </div>
+    </div>
+    <!--MAIN-->
     <main>
         <img src="imagenes/vela-horizontal.jpg">
     </main>
+    <!-- PRODUCTOS -->
     <section id="productos">
-        <h1>Elegancia & Naturaleza en cada llama</h1>
-        <p>
-            ¿Buscas una forma de añadir un toque de lujo a tu hogar? Nuestras velas de soja son la opción perfecta. Cada vela está elaborada con cera de soja natural, proporcionando una quema más limpia y duradera que las velas convencionales. Disponibles en una variedad de aromas únicos, nuestras velas no solo decoran tu espacio, sino que también lo llenan de fragancias suaves y duraderas. ¡Descubre cómo lo natural puede ser sinónimo de belleza y bienestar!
+        <h1>Elegancia & Naturaleza en cada llama🔥</h1>
+        <p>¿Buscas una forma de añadir un toque de lujo a tu hogar? Nuestras velas de soja son la opción
+            perfecta. Cada
+            vela está elaborada con cera de soja natural, proporcionando una quema más limpia y duradera que las
+            velas
+            convencionales. Disponibles en una variedad de aromas únicos, nuestras velas no solo decoran tu
+            espacio,
+            sino que también lo llenan de fragancias suaves y duraderas. ¡Descubre cómo lo natural puede ser
+            sinónimo de
+            belleza y bienestar!
         </p>
-        
     </section>
     <section id="shop">
-<div><img src="imagenes/velas.jpg"></div>
-<div><img src="imagenes/nuestras-velas.jpg"></div>
-</section>
-    <button>COMPRAR AHORA</button>
+        <div>
+            <img src="imagenes/velas.jpg">
+            <p>Las velas de soja son una opción amigable con el medio ambiente que también promueve la salud y
+                el
+                bienestar</p>
+        </div>
+        <div>
+            <img src="imagenes/nuestras-velas.jpg">
+            <p>Las velas de soja son una opción amigable con el medio ambiente que también promueve la salud y
+                el
+                bienestar</p>
+        </div>
+    </section>
+    <!-- GRID PRODUCTOS-->
+    <h2>Nuestros productos</h2>
+    <section class="grid">
+        <div><img src="imagenes/foto1.jpg"></div>
+        <div><img src="imagenes/foto2.jpg"></div>
+        <div><img src="imagenes/foto3.jpg"></div>
+        <div><img src="imagenes/foto4.jpg"></div>
+        <div><img src="imagenes/foto5.jpg"></div>
+        <div><img src="imagenes/foto6.jpg"></div>
+    </section>
+    </section>
+    <div class="button-class">
+        <button><a href="http://tiendanube.com">VER TODOS LOS PRODUCTOS</a></button>
+    </div>
+    <!-- FORMULARIO-->
+    <h3>Contactate con nosotros</h3>
+    <section id="contacto">
+        <form action="" method="POST">
+            <div>
+                <input type="text" name="nombre" placeholder="Lucia Silva">
+            </div>
+            <div>
+                <input type="email" name="email" placeholder="nombre@dominio.com">
+            </div>
+            <div>
+                <input type="phone" name="telefono" placeholder="+549000000">
+            </div>
+            <div>
+                <textarea name="mensaje" id="" placeholder="Ingrese su mensaje"></textarea>
+            </div>
+            <div class="button-class">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </section>
+    <!--FOOTER-->
+    <footer>
+        <div>LUCY CANDLES -</div>
+        <div class="social-network">
+            <div><img src="imagenes/instagram.svg" alt=""></div>
+            <div><img src="imagenes/shopping-cart.svg" alt=""></div>
+            <div><img src="imagenes/whatsapp.svg" alt=""></div>
+        </div>
+        <div class="whatsapp"><img src="imagenes/whatsapp.png" alt=""></div>
+    </footer>
 </body>
+<script src="js/index.js"></script>
 </html>
