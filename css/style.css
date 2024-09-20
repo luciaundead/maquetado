@@ -1,78 +1,308 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=New+Amsterdam&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-*
-{
-    padding:0;
-    margin:0;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Text:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-.menu-header{
+.menu-header {
     background-color: #d9d9d9;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.cart img{
+    width: 30px;
+    margin-right: 20px;
+    filter: invert(10%) sepia(0%) saturate(2578%) hue-rotate(148deg) brightness(87%) contrast(78%);
 
-ul{
+}
+
+
+ul {
     display: flex;
     gap: 30px;
-    padding-right: 30px;
 }
 
-li{
+li {
     list-style-type: none;
-    font-family: New Amsterdam;
+    font-family: Roboto;
     font-size: 20px;
     gap: 30px;
+    font-weight: 600;
 }
 
-main img{
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(119, 85, 85);
+    text-decoration: none;
+}
+
+main img {
     width: 100%;
     height: auto;
 }
 
-h1{
+h1,
+h2,
+h3 {
     color: rgb(156, 133, 133);
     font-family: DM Serif Text;
     text-align: center;
-    font-size: 25px;
+    font-size: 2.5em;
     margin-bottom: 10px;
 }
 
-#productos{
-    width: 100%;
+h2{
+    padding-top: 20px;
+}
+
+#productos {
     padding: 50px;
     font-family: Roboto;
+    padding-top: 20px;
     align-content: center;
-
 }
 
-p{
-    width: 90%;
+p {
+
     text-align: center;
+    align-content: center;
+    font-family: Roboto;
 }
 
-button{
-    background-color: rgb(161, 125, 125);
-    color: white;
-    width: 150px;
+#shop {
+    display: flex;
+    justify-content: center;
+}
+
+#shop div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#shop div img {
+    width: 75%;
+    box-shadow: 3px 4px rgb(218, 218, 218);
+}
+
+#shop div img:hover{
+    transform:scale(1.1);
+    transition-duration: 0.5s;
+
+}
+
+#shop div p {
+    padding: 30px;
+    width: 50%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: 250px 250px;
+    column-gap: 20px;
+    justify-content: center;;
+
+}
+
+.grid img {
+    width: 100%;
+}
+
+button {
+    background-color: rgb(218, 211, 211);
+    color: rgb(152, 74, 74);
+    width: 200px;
     height: 50px;
     margin: 15px;
     font-family: Roboto;
-    font-size: 1em;
+    font-size: 0.8em;
+    font-weight: 600;
     border-radius: 5px;
     border-style: none;
 }
 
-#shop img{
-    width: 80%;
-    height: auto;
-}
-
-#shop{
+.button-class {
     display: flex;
     justify-content: center;
-    width: 100%;
+    padding-top: 10px;
 }
 
+.social-network {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-network img {
+    width: 25px;
+    padding-left: 10px;
+    filter: invert(10%) sepia(0%) saturate(2578%) hue-rotate(148deg) brightness(87%) contrast(78%);
+}
+
+#contacto{
+    width: 100%;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(252, 252, 252);
+    padding-bottom: 20px;
+}
+
+form{
+    width: 770px;
+    padding: 30px;
+    border: 1px solid rgb(222, 222, 222);
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(230, 219, 219);
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+}
+
+form div input, form div textarea{
+    width: 300px;
+}
+
+form div input{
+    padding: 10px 10px;
+    margin: 5px;
+}
+
+form div textarea{
+    resize: none;
+    height: 200px;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: #836e6e;
+    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Bebas Neue;
+    font-size: 20px;
+}
+
+.whatsapp{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    }
+    
+.whatsapp img{
+        width: 50px;
+        height: 50px;
+    
+    }
+
+.carrito{
+    width: 300px;
+    height: auto;
+        background-color: rgb(240, 240, 240);
+        border: 1px solid rgb(202, 202, 202);
+        padding: 10px;
+        position: absolute;
+        top: 90px;
+        right: 25px;
+        border-radius: 5px;
+        font-family: Roboto;
+    }
+
+.carrito-producto{
+    display: flex;
+    padding: 5px;
+    }
+
+    .carrito-producto div{
+        padding: 10px;
+    }
+
+.carrito-producto div img{
+        width: 50px;
+    }
+
+    .carrito .cerrar-producto{
+        cursor: pointer;
+        text-align: end;
+    }
+
+    @media (max-width: 768px){
+
+        .cart{
+            position: absolute;
+            top: 25px;
+            right: 5px;
+        }
+
+        ul{
+            padding-bottom: 20px;
+        }
+
+        .menu-header {
+            background-color: #d9d9d9;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #productos {
+                width: 100%;
+                padding: 50px;
+                font-family: Roboto;
+                padding-top: 20px;
+                align-content: center;
+        }
+
+        #shop {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #contacto{
+            display: flex;  
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(252, 252, 252);
+            padding-bottom: 20px;
+        }
+
+        form{
+            width: 70%;
+            padding: 30px;
+            border: 1px solid rgb(222, 222, 222);
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px rgb(230, 219, 219);
+            display: flex;
+            flex-direction: column;
+            align-items: center;    
+            justify-content: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 350px;
+            grid-template-rows: 250px;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+                
+    }
+    
